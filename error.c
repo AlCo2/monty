@@ -1,5 +1,9 @@
 #include "monty.h"
-
+/**
+ * handle_error - function to handle errors
+ * 
+ * @error_code: code of error
+*/
 void handle_error(int error_code, ...)
 {
 	int line;
@@ -30,3 +34,4 @@ void handle_error(int error_code, ...)
 	}
 	exit(EXIT_FAILURE);
 }
+

@@ -1,5 +1,12 @@
 #include "monty.h"
-
+/**
+ * check_cmd - function to check cmd
+ *
+ * @opcode: code
+ * @arg: argument
+ * @type: stack or queue
+ * @line: line executed
+*/
 void check_cmd(char *opcode, char *arg, int type, int line)
 {
 	int i = 0;
@@ -23,6 +30,14 @@ void check_cmd(char *opcode, char *arg, int type, int line)
 	if (!found)
 		handle_error(3, line, opcode);
 }
+/**
+ * run_cmd - function to run cmd
+ *
+ * @func: instruction
+ * @arg: argument for func
+ * @type: stack or queue
+ * @line: line executed
+*/
 void run_cmd(instruction_t func, char *arg, int type, int line)
 {
 	int negative = 0;
@@ -53,3 +68,4 @@ void run_cmd(instruction_t func, char *arg, int type, int line)
 	}else
 		func.f(&head, line);
 }
+

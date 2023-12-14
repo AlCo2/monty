@@ -1,5 +1,9 @@
 #include "monty.h"
-
+/**
+ * process_file - function to process the file
+ *
+ * @file_name: the file we want to process
+*/
 void process_file(char *file_name)
 {
 	FILE *file = fopen(file_name, "r");
@@ -8,7 +12,11 @@ void process_file(char *file_name)
 	read_file_lines(file);
 	fclose(file);
 }
-
+/**
+ * read_file_lines - function to read each line in the file
+ *
+ * @file: the file
+*/
 void read_file_lines(FILE *file)
 {
 	char *line = NULL;
@@ -23,7 +31,15 @@ void read_file_lines(FILE *file)
 	}
 	free(line);
 }
-
+/**
+ * process_line - function to process line
+ *
+ * @line: the line
+ * @count: line counter
+ * @type: queue or stack
+ *
+ * Return: (0) if stack, (1) if queue
+*/
 int process_line(char *line, int count, int type)
 {
 	char *arg;
