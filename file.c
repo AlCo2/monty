@@ -41,7 +41,7 @@ int process_line(char *line, int count, int type)
 	if (strcmp(opcode, "stack") == 0)
 		return (0);
 	arg = strtok(NULL, " ");
-	printf("%d-opcode:%s arg: %s\n", count, opcode, arg);
-	return type;
+	check_cmd(opcode, arg, type, count);
+	return (type);
 }
 

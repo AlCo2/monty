@@ -1,5 +1,7 @@
 #include "monty.h"
 
+stack_t *head = NULL;
+
 int main(int argc, char **argv)
 {
 	if (argc != 2)

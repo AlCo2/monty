@@ -39,11 +39,16 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-#endif
+extern stack_t *head;
 
 void process_file(char *file_name);
 void read_file_lines(FILE *file);
 int process_line(char *line, int count, int type);
-
+void check_cmd(char *opcode, char *arg, int type, int line);
+void run_cmd(instruction_t func, char *arg, int type, int line);
+stack_t *create_node(int val);
+void push(stack_t **stack, unsigned int line);
+void pall(stack_t **stack, unsigned int line);
 void handle_error(int error_code, ...);
 
+#endif
