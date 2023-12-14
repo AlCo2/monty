@@ -7,6 +7,7 @@
 void process_file(char *file_name)
 {
 	FILE *file = fopen(file_name, "r");
+
 	if (file == NULL)
 		handle_error(1, file_name);
 	read_file_lines(file);

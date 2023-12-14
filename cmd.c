@@ -62,10 +62,11 @@ void run_cmd(instruction_t func, char *arg, int type, int line)
 		}
 		number = atoi(arg);
 		if (negative)
-			number *=-1;
+			number *= -1;
 		new_node = create_node(number);
 		push(&new_node, line);
-	}else
+	}
+	else
 		func.f(&head, line);
 }
 

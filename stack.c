@@ -4,18 +4,19 @@
  * create_node - function to create nodes
  *
  * @val: the value
- * 
+ *
  * Return: the node created
 */
 stack_t *create_node(int val)
 {
 	stack_t *new_node = malloc(sizeof(stack_t));
+
 	if (new_node == NULL)
 		handle_error(2);
 	new_node->n = val;
 	new_node->prev = NULL;
 	new_node->next = NULL;
-	return new_node;
+	return (new_node);
 }
 /**
  * push - function to push to stack
@@ -47,7 +48,7 @@ void push(stack_t **stack, unsigned int line)
 void pall(stack_t **stack, unsigned int line)
 {
 	stack_t *temp = (*stack);
-	
+
 	(void)line;
 	while (temp)
 	{
