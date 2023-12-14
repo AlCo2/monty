@@ -20,9 +20,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -35,8 +35,8 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 extern stack_t *head;
@@ -48,6 +48,7 @@ void check_cmd(char *opcode, char *arg, int type, int line);
 void run_cmd(instruction_t func, char *arg, int type, int line);
 stack_t *create_node(int val);
 void push(stack_t **stack, unsigned int line);
+void push_q(stack_t **stack, unsigned int line);
 void pall(stack_t **stack, unsigned int line);
 void handle_error(int error_code, ...);
 

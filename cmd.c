@@ -64,7 +64,10 @@ void run_cmd(instruction_t func, char *arg, int type, int line)
 		if (negative)
 			number *= -1;
 		new_node = create_node(number);
-		push(&new_node, line);
+		if (type == 1)
+			push_q(&new_node, line);
+		else
+			push(&new_node, line);
 	}
 	else
 		func.f(&head, line);
