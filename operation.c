@@ -91,3 +91,31 @@ void pchar(stack_t **stack, unsigned int line)
 	}
 	printf("%c\n", (char)val);
 }
+/**
+ * pstr - function to print char from top of stack
+ *
+ * @stack: the head
+ * @line: the line number
+*/
+void pstr(stack_t **stack, unsigned int line)
+{
+	int val;
+	stack_t *temp = (*stack);
+	
+	(void)line;
+	if (*stack == NULL)
+	{
+		printf("\n");
+	}
+	while (temp)
+	{
+		val = temp->n;
+		if (val <= 0 || val > 127)
+		{
+			break;
+		}
+		printf("%c", (char)val);
+		temp = temp->next;
+	}
+	printf("\n");
+}
