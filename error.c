@@ -40,4 +40,21 @@ void handle_error(int error_code, ...)
 	}
 	exit(EXIT_FAILURE);
 }
+/**
+ * handle_error2 - function to handle errors
+ *
+ * @error_code: code of error
+*/
+void handle_error2(int error_code, ...)
+{
+	va_list a_list;
 
+	va_start(a_list, error_code);
+	switch (error_code)
+	{
+		case 7:
+			fprintf(stderr, "L%d: can't swap, stack too short\n", va_arg(a_list, int));
+			break;
+	}
+	exit(EXIT_FAILURE);
+}
