@@ -24,6 +24,7 @@ void check_cmd(char *opcode, char *arg, int type, int line)
 		{"div", divid},
 		{"mul", mul},
 		{"mod", mod},
+		{"pchar", pchar},
 		{NULL}
 	};
 	if (opcode[0] == '#')
