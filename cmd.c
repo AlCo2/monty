@@ -23,6 +23,7 @@ void check_cmd(char *opcode, char *arg, int type, int line)
 		{"sub", sub},
 		{"div", divid},
 		{"mul", mul},
+		{"mod", mod},
 		{NULL}
 	};
 
