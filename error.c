@@ -30,6 +30,9 @@ void handle_error(int error_code, ...)
 		case 4:
 			fprintf(stderr, "L%d: usage: push integer\n", va_arg(a_list, int));
 			break;
+		case 5:
+			fprintf(stderr, "L%d: can't pint, stack empty\n", va_arg(a_list, int));
+			break;
 
 	}
 	exit(EXIT_FAILURE);

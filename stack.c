@@ -56,4 +56,16 @@ void pall(stack_t **stack, unsigned int line)
 		temp = temp->next;
 	}
 }
+/**
+ * pint - print value in top
+ *
+ * @stack: the head
+ * @line: line number
+*/
+void pint(stack_t **stack, unsigned int line)
+{
+	if (*stack == NULL)
+		handle_error(5, line);
+	printf("%d\n", (*stack)->n);
+}
 

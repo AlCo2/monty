@@ -15,6 +15,7 @@ void check_cmd(char *opcode, char *arg, int type, int line)
 	instruction_t list[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL}
 	};
 
