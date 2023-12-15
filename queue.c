@@ -41,3 +41,22 @@ void swap(stack_t **stack, unsigned int line)
 	(*stack)->next->n = (*stack)->n;
 	(*stack)->n = temp;
 }
+/**
+ * add - function to add two element in stack
+ *
+ * @stack: the head
+ * @line: the line number
+*/
+void add(stack_t **stack, unsigned int line)
+{
+	int sum;
+	stack_t *temp;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+		handle_error2(8, line);
+	sum = (*stack)->n + (*stack)->next->n;
+	temp = (*stack)->next;
+	temp->n = sum;
+	free(*stack);
+	*stack = temp;
+}
