@@ -89,5 +89,5 @@ void pchar(stack_t **stack, unsigned int line)
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line);
 		exit(EXIT_FAILURE);
 	}
-	printf("%c", (char)val);
+	printf("%c\n", (char)val);
 }

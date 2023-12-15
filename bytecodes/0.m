@@ -1,4 +1,2 @@
-push 54
-push 59
+push 72
 pchar
-push 89
