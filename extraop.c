@@ -10,7 +10,7 @@ void rotl(stack_t **stack, unsigned int line)
 {
 	stack_t *last = *stack;
 	
-	if (last = NULL || last->next == NULL)
+	if (last == NULL || last->next == NULL)
 		return;
 	(void)line;
 	while (last->next)
