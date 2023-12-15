@@ -106,6 +106,7 @@ void pstr(stack_t **stack, unsigned int line)
 	if (*stack == NULL)
 	{
 		printf("\n");
+		return;
 	}
 	while (temp)
 	{
