@@ -22,9 +22,10 @@ int main(int argc, char **argv)
 /**
  * free_stack - free everything
 */
-void free_stack()
+void free_stack(void)
 {
 	stack_t *temp;
+
 	if (head == NULL)
 		return;
 	temp = head;
