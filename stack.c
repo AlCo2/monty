@@ -68,4 +68,20 @@ void pint(stack_t **stack, unsigned int line)
 		handle_error(5, line);
 	printf("%d\n", (*stack)->n);
 }
+/**
+ * pop - remove the top element of the stack
+ *
+ * @stack: the head
+ * @line: line number
+*/
+void pop(stack_t **stack, unsigned int line)
+{
+	stack_t *temp;
 
+	if (*stack == NULL)
+		handle_error(6, line);
+
+	temp = (*stack)->next;
+	free(*stack);
+	*stack = temp;
+}

@@ -52,5 +52,6 @@ void push_q(stack_t **stack, unsigned int line);
 void pall(stack_t **stack, unsigned int line);
 void handle_error(int error_code, ...);
 void free_stack();
-void pint();
+void pint(stack_t **stack, unsigned int line);
+void pop(stack_t **stack, unsigned int line);
 #endif
