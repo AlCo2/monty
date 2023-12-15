@@ -101,7 +101,7 @@ void pstr(stack_t **stack, unsigned int line)
 {
 	int val;
 	stack_t *temp = (*stack);
-	
+
 	(void)line;
 	if (*stack == NULL)
 	{
