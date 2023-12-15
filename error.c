@@ -25,10 +25,10 @@ void handle_error(int error_code, ...)
 		case 3:
 			line = va_arg(a_list, int);
 			opcode = va_arg(a_list, char *);
-			fprintf(stderr, "L%d: unknown instruction %s", line, opcode);
+			fprintf(stderr, "L%d: unknown instruction %s\n", line, opcode);
 			break;
 		case 4:
-			fprintf(stderr, "L%d: usage: push integer", va_arg(a_list, int));
+			fprintf(stderr, "L%d: usage: push integer\n", va_arg(a_list, int));
 			break;
 
 	}
