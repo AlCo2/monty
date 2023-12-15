@@ -83,7 +83,7 @@ void sub(stack_t **stack, unsigned int line)
 	stack_t *temp;
 
 	if (*stack == NULL || (*stack)->next == NULL)
-		handle_error2(8, line);
+		handle_error2(9, line);
 	sub = (*stack)->next->n - (*stack)->n;
 	temp = (*stack)->next;
 	temp->n = sub;

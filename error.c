@@ -61,6 +61,15 @@ void handle_error2(int error_code, ...)
 		case 9:
 			fprintf(stderr, "L%d: can't sub, stack too short\n", va_arg(a_list, int));
 			break;
+		case 10:
+			fprintf(stderr, "L%d: can't div, stack too short\n", va_arg(a_list, int));
+			break;
+		case 11:
+			fprintf(stderr, "L%d: can't mul, stack too short\n", va_arg(a_list, int));
+			break;
+		case 12:
+			fprintf(stderr, "L%d: can't mod, stack too short\n", va_arg(a_list, int));
+			break;
 	}
 	exit(EXIT_FAILURE);
 }
