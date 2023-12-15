@@ -45,7 +45,6 @@ void run_cmd(instruction_t func, char *arg, int type, int line)
 	int i;
 	stack_t *new_node;
 
-	(void)type;
 	if (strcmp(func.opcode, "push") == 0)
 	{
 		if (arg == NULL)
