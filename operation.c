@@ -68,3 +68,26 @@ void mod(stack_t **stack, unsigned int line)
 	free(*stack);
 	*stack = temp;
 }
+/**
+ * pchar - function to print char from top of stack
+ *
+ * @stack: the head
+ * @line: the line number
+*/
+void pchar(stack_t **stack, unsigned int line)
+{
+	int val;
+
+	if (*stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line);
+		exit(EXIT_FAILURE);
+	}
+	val = (*stack)->n;
+	if (val < 0 || val > 127)
+	{
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", line);
+		exit(EXIT_FAILURE);
+	}
+	printf("%c", val);
+}
