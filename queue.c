@@ -60,3 +60,14 @@ void add(stack_t **stack, unsigned int line)
 	free(*stack);
 	*stack = temp;
 }
+/**
+ * nop - function that do nothing
+ *
+ * @stack: the head
+ * @line: the line number
+*/
+void nop(stack_t **stack, unsigned int line)
+{
+	(void)stack;
+	(void)line;
+}

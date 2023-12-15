@@ -19,6 +19,7 @@ void check_cmd(char *opcode, char *arg, int type, int line)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
+		{"nop", nop},
 		{NULL}
 	};
 
