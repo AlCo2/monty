@@ -26,7 +26,8 @@ void check_cmd(char *opcode, char *arg, int type, int line)
 		{"mod", mod},
 		{NULL}
 	};
-
+	if (opcode[0] == '#')
+		return;
 	while (list[i].opcode != NULL)
 	{
 		if (strcmp(list[i].opcode, opcode) == 0)
