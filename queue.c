@@ -71,3 +71,22 @@ void nop(stack_t **stack, unsigned int line)
 	(void)stack;
 	(void)line;
 }
+/**
+ * sub - function to sub two element in stack
+ *
+ * @stack: the head
+ * @line: the line number
+*/
+void sub(stack_t **stack, unsigned int line)
+{
+	int sub;
+	stack_t *temp;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+		handle_error2(8, line);
+	sub = (*stack)->next->n - (*stack)->n;
+	temp = (*stack)->next;
+	temp->n = sub;
+	free(*stack);
+	*stack = temp;
+}

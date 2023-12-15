@@ -20,6 +20,7 @@ void check_cmd(char *opcode, char *arg, int type, int line)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		{NULL}
 	};
 
